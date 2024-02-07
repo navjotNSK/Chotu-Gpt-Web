@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chotu Gpt</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container_heading">
+        <h1>Chotu Gpt</h1>
+      </div>
+      
+    <div class="container">
+        <label for="input-text">Enter your prompt:</label>
+        <textarea id="input-text" name="input-text" rows="5"></textarea>
+        <button id="submit-button">Submit</button>
+        <div id="output-text"></div>
+        <div id="loading-indicator" style="display: none;">Loading...</div>
+    </div>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module" src="script.js"></script> </body>
+</html>
