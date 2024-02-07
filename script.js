@@ -8,19 +8,19 @@ const loadingIndicator = document.getElementById('loading-indicator');
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the Google Generative AI client
-const API_KEY = 'AIzaSyD0SG2HzoslgU1bcAQTTkqTmjOyMhBgilI'; // Replace with your API key
+const API_KEY = 'YOUR_API_KEY'; // Replace with your API key
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 async function run(prompt) {
-  // Get the gemini-pro model
+  
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-  // Generate content using the prompt
+  
   const result = await model.generateContent(prompt);
   const response = await result.response;
   const text = response.text();
 
-  return text; // Return the generated text
+  return text; 
 }
 
 submitButton.addEventListener('click', async () => {
@@ -31,16 +31,16 @@ submitButton.addEventListener('click', async () => {
     return;
   }
 
-  loadingIndicator.style.display = 'block'; // Show loading indicator
+  loadingIndicator.style.display = 'block'; 
 
   try {
-    const generatedText = await run(prompt); // Call the run function
+    const generatedText = await run(prompt); 
     outputText.textContent = generatedText;
   } catch (error) {
     console.error(error);
     outputText.textContent = 'An error occurred. Please try again later.';
   } finally {
-    loadingIndicator.style.display = 'none'; // Hide loading indicator
+    loadingIndicator.style.display = 'none'; 
   }
 });
 
