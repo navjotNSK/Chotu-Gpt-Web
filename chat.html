@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    <link rel="stylesheet" href="style.css">
+    <header class="container_heading">
+        <h1>Chotu Gpt</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#login">Login</a>
+        <a href="#signup">Signup</a>
+        <a href="chat.html">Chat</a>
+    </nav>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-history"></div>
+        <form class="chat-form">
+            <input type="text" id="message" placeholder="Type your message..." required>
+            <button type="button" id="send-button">Send</button>
+        </form>
+    </div>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module" src="chat.js"></script>
+</body>
+</html>
