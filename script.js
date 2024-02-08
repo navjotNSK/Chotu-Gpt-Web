@@ -10,7 +10,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the Google Generative AI client
 const API_KEY = 'YOUR_API_KEY'; // Replace with your API key
-const genAI = new GoogleGenerativeAI(API_KEY);
+const genAI = new GoogleGenerativeAI(YOUR_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 async function run(prompt) {
